@@ -1,7 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cfb506fa-090c-454d-b3d2-325002628965" name="Default Changelist" comment="" />
+    <list default="true" id="cfb506fa-090c-454d-b3d2-325002628965" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_in_env/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_in_env/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_in_env/templates/filtering.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_in_env/templates/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ecom" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0002_remove_item_category.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0003_contactmessages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0004_delete_contactmessages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djecommerce/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djecommerce/settings/development.py" beforeDir="false" afterPath="$PROJECT_DIR$/djecommerce/settings/development.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_in_env/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_in_env/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/account_inactive.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/account_inactive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email/email_confirmation_message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/email/email_confirmation_message.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/email/email_confirmation_signup_message.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/email/email_confirmation_signup_subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email/email_confirmation_subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/email/email_confirmation_subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email/password_reset_key_message.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/email/password_reset_key_message.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email/password_reset_key_subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/email/password_reset_key_subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/email_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/email_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/cannot_delete_primary_email.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/cannot_delete_primary_email.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/email_confirmation_sent.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/email_confirmation_sent.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/email_confirmed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/email_confirmed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/email_deleted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/email_deleted.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/logged_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/logged_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/logged_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/logged_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/password_changed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/password_changed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/password_set.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/password_set.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/primary_email_set.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/primary_email_set.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/messages/unverified_primary_email.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/messages/unverified_primary_email.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/password_change.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/password_change.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/password_reset.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/password_reset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_from_key.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/password_reset_from_key.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_from_key_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/password_reset_from_key_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/password_set.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/password_set.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/signup_closed.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/signup_closed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/snippets/already_logged_in.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/snippets/already_logged_in.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/templates - Shortcut.lnk" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/templates - Shortcut.lnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/verification_sent.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/verification_sent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/verified_email_required.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/account/verified_email_required.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/openid/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/openid/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/openid/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/openid/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/order_snippet.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/order_snippet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/order_summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/order_summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/payment-confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/payment-confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/payment1.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/payment1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/request_refund.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/request_refund.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scripts.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/scripts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/authentication_error.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/authentication_error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/connections.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/connections.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/login_cancelled.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/login_cancelled.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/messages/account_connected.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/messages/account_connected.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/messages/account_connected_other.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/messages/account_connected_other.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/messages/account_disconnected.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/messages/account_disconnected.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/snippets/login_extra.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/snippets/login_extra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/socialaccount/snippets/provider_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_in_env/templates/socialaccount/snippets/provider_list.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,19 +115,24 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1QSEmRIOMlWBHPWrgSx3wmvtP1E" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static_in_env/img" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\johnson\Downloads\Ecommerce\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\johnson\Downloads\Ecommerce\static_in_env\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\johnson\Desktop\Ecommerce\static_in_env" />
+      <recent name="C:\Users\johnson\Downloads\Ecommerce\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -78,11 +166,48 @@
       <workItem from="1568106548767" duration="2025000" />
       <workItem from="1568779158741" duration="999000" />
       <workItem from="1568781148594" duration="1339000" />
-      <workItem from="1569590700541" duration="607000" />
+      <workItem from="1569590700541" duration="1205000" />
+      <workItem from="1571393836873" duration="1166000" />
+      <workItem from="1571400184219" duration="958000" />
+      <workItem from="1571739175424" duration="1569000" />
+      <workItem from="1571744451739" duration="756000" />
+      <workItem from="1571763977207" duration="652000" />
+      <workItem from="1571798630780" duration="599000" />
+      <workItem from="1573178394180" duration="12000" />
+      <workItem from="1573213124292" duration="12481000" />
+      <workItem from="1573633752583" duration="2040000" />
+      <workItem from="1573691245044" duration="1269000" />
+      <workItem from="1573963169771" duration="351000" />
+      <workItem from="1573964602532" duration="19986000" />
+      <workItem from="1573990576260" duration="5982000" />
+      <workItem from="1574064627723" duration="10442000" />
+      <workItem from="1574096321786" duration="40501000" />
+      <workItem from="1574299995494" duration="1359000" />
+      <workItem from="1574402074746" duration="17355000" />
+      <workItem from="1574504615267" duration="854000" />
+      <workItem from="1574651765723" duration="2717000" />
+      <workItem from="1574661727704" duration="3486000" />
+      <workItem from="1574687452385" duration="334000" />
+      <workItem from="1574740688405" duration="663000" />
+      <workItem from="1574747697017" duration="13969000" />
+      <workItem from="1574766042289" duration="2370000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

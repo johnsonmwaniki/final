@@ -15,7 +15,8 @@
   <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
   <style type="text/css">
     html,
-    body,
+
+    {#body,#}
     header,
     .carousel {
       height: 60vh;
@@ -24,7 +25,13 @@
     @media (max-width: 740px) {
 
       html,
-      body,
+       body {
+
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    }
+
       header,
       .carousel {
         height: 100vh;
@@ -46,7 +53,7 @@
 
 {% include "navbar.html" %}
 
-<body>
+<body style="background-color: whitesmoke">
 
     <div class="mt-5 pt-4">
     {% if messages %}
@@ -67,8 +74,9 @@
     {% block extra_body %}
     {% endblock %}
 
-    {% include "footer.html" %}
+    {% include "footer.html" %}<div style="position: absolute">
     {% include "scripts.html" %}
+
 
     {% block extra_scripts %}
     {% endblock extra_scripts %}

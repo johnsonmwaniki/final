@@ -2,22 +2,37 @@
 html,
 body,
 .view {
-  height: 100%; }
+  height: 100%;
+  width: 100%;}
+
+.img-thumbnail {
+height: 250px !important;
+}
+
+.card-img-top {
+height: 250px !important;
+}
 
 /* Half Page Carousel itself*/
 .carousel {
   height: 50%; }
   .carousel .carousel-inner {
-    height: 100%; }
+    height: 100%;
+    width: 100%;
+  }
     .carousel .carousel-inner .carousel-item,
     .carousel .carousel-inner .active {
-      height: 100%; }
+      height: 100%;
+      width: 100%;
+    }
 
 /* Adjustment for mobile devices*/
 @media (max-width: 776px) {
   .carousel {
-    height: 100%; } }
+    height: 100%;
+    width: 100%;
+  } }
 
 /* Footer color for sake of consistency with Navbar */
 .page-footer {
-  background-color: #929FBA; }
+  background-color: #3b465e }

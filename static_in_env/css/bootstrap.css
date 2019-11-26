@@ -339,7 +339,7 @@ progress {
 
 ::-webkit-file-upload-button {
   font: inherit;
-  -webkit-appearance: button;
+  -webkit-appearance: button; text-decoration-style: solid;
 }
 
 output {

@@ -1,4 +1,8 @@
+import operator
+from functools import reduce
+import django_filters
 from django.core.mail import send_mail
+from django.db.models import Q, Count
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -16,7 +20,7 @@ from django.urls import reverse
 import requests
 from django.http import request, HttpResponse
 from requests.auth import HTTPBasicAuth
-from .forms import CheckoutForm, CouponForm, RefundForm, PaymentForm, mpesaform
+from .forms import CheckoutForm, CouponForm, RefundForm, PaymentForm, mpesaform,categories
 from .models import Item, OrderItem, Order, Address, Payment, Coupon, Refund, UserProfile , mpesapayment
 import base64
 import random
@@ -26,7 +30,67 @@ from django.http import HttpResponse
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def about(request):
+
     return render(request, 'about.html')
+
+def filtering(request, categories):
+    items = Item.objects.filter(categories=categories)
+    # items=Item.objects.all()
+    print(categories)
+
+    # if 'toilet' in request.GET:
+    #     items = items.filter(categories='toilet')
+    #
+    # if 'cater' in request.GET:
+    #     items = items.filter(categories='cater')
+    #
+    # if 'seat' in request.GET:
+    #     items = items.filter(categories='seat')
+    print(items)
+    # items =Item.objects.all()
+    search_term = ''
+    # if 'text' in request.GET:
+    #     items = items.order_by('title')
+    # if 'pub_date' in request.GET:
+    #     items = items.order_by('price')
+    # if 'price' in request.GET:
+    #     items = items.filter(discount_price=0)
+
+    context = {'items': items}
+
+    return render(request, 'filtering.html', context)
+
+class HomeView(ListView):
+    model = Item
+    paginate_by = 10
+    template_name = "home.html"
+    ordering = ['title']
+    form_class = categories
+    # items=Item.objects.all()
+    # print(items)
+
+
+    def get_queryset(self):
+        result = super(HomeView, self).get_queryset()
+
+        query = self.request.GET.get('q')
+
+        if query:
+            query_list = query.split()
+            result = result.filter(
+                reduce(operator.and_,
+                       (Q(title__icontains=q) for q in query_list))
+                # reduce(operator.and_,
+                #        (Q(description__icontains=q) for q in query_list))
+            )
+
+
+
+        return result
+
+
+def contact(request):
+    return render(request, 'contact.html')
 
 def create_ref_code():
     return ''.join(random.choices(string.ascii_lowercase + string.digits, k=20))
@@ -52,7 +116,9 @@ class CheckoutView(View):
         try:
             order = Order.objects.get(user=self.request.user, ordered=False)
             form = CheckoutForm()
+            items1=OrderItem.objects.all()
             context = {
+                'items1':items1,
                 'form': form,
                 'couponform': CouponForm(),
                 'order': order,
@@ -263,8 +329,8 @@ class PaymentView(View):
             datatoencode = shortcode + passkey + formated
             encodedpassword = base64.b64encode(datatoencode.encode())
             decodedpassword = encodedpassword.decode('utf-8')
-            consumer_key = "3U96aVueDZ4VusfhruDHeJE8NXfxo1r7"
-            consumer_secret = "PCnrQlGDNprW7A5p"
+            consumer_key = "D86MoHnvcqUhyKA0A8IoORP3BbEJOWL9"
+            consumer_secret = "UCVHDJWh49453xJA"
             from requests.auth import HTTPBasicAuth
             consumer_key = consumer_key
             consumer_secret = consumer_secret
@@ -302,12 +368,6 @@ class PaymentView(View):
         return redirect("/")
 
 
-class HomeView(ListView):
-    model = Item
-    paginate_by = 10
-    template_name = "home.html"
-
-
 class OrderSummaryView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
         try:
@@ -319,8 +379,13 @@ class OrderSummaryView(LoginRequiredMixin, View):
         except ObjectDoesNotExist:
             messages.warning(self.request, "You do not have an active order")
             return redirect("/")
-
-
+# def ItemDetailView(request, slug):
+#     prod =Item.objects.filter(slug=slug)
+#
+#     context=\
+#         {'prod':prod}
+#     return render(request,'product.html',context)
+#
 class ItemDetailView(DetailView):
     model = Item
     template_name = "product.html"
@@ -524,7 +589,16 @@ def paymentconf(request):
     }
     response = json.dumps(data)
     return HttpResponse(response, content_type='application/json')
+def report(request):
+    items1 = Item.objects.all()
+    items2 = Order.objects.all()
+    items3=OrderItem.objects.all()
+    print(items1)
+    print(items2)
 
+    context={'items1':items1,'items2':items2,'items3':items3}
+
+    return render(request,'report.html',context)
 # def contact(request):
 #     return render(request, 'microsite/contact.html', {})
 # """

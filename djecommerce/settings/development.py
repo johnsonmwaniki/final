@@ -46,6 +46,38 @@ DATABASES = {
         'PORT': '',
     }
 }
+# Password validation
+# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+
+
+# Internationalization
+# https://docs.djangoproject.com/en/2.2/topics/i18n/
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'Africa/Nairobi'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = True
+
 
 STRIPE_PUBLIC_KEY = 'pk_test_dhVvGuD9Ond4lgXl3hN4IJ8h00pofyiHp1'
 STRIPE_SECRET_KEY = 'sk_test_y06mC0pt4IZiRwSgRrlIoHgG00HtlLJzlG'
@@ -53,8 +85,8 @@ STRIPE_SECRET_KEY = 'sk_test_y06mC0pt4IZiRwSgRrlIoHgG00HtlLJzlG'
 EMAIL_BACKEND ="django.core.mail.backends.smtp.EmailBackend"
 # gmail settings
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kevomash10@gmail.com'
-EMAIL_HOST_PASSWORD = 'uvosvpqobgjbrjwl'
+EMAIL_HOST_USER = 'sallieshie100@gmail.com'
+EMAIL_HOST_PASSWORD = 'Sallieshie100'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
@@ -62,7 +94,9 @@ EMAIL_USE_TLS = True
 
 
 
-DEFAULT_FROM_EMAIL = 'Johnson Mwaniki <johnsonmwaniki100@email.com>'
+DEFAULT_FROM_EMAIL = 'Johnson Mwaniki <sallieshie100@gmail.com>'
 ADMINS = (
-    ('Johnson Mwaniki', 'johnsonmwaniki100@email.com'),
+    ('Johnson Mwaniki', 'sallieshie100@gmail.com'),
 )
+
+MANAGERS = ADMINS

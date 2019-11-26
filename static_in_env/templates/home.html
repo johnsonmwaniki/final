@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+    <style>
+   #search:link {
+  color: red;
+}
+
+/* visited link */
+#search:visited {
+  color: red;
+}
+
+/* mouse over link */
+#search:hover {
+  color: hotpink;
+}
+
+/* selected link */
+#search:active {
+  color: blue;
+}
+    </style>
+<main>
+  <div class="container">
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+      <!-- Navbar brand -->
+      <span class="navbar-brand">Categories:</span>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+                   <a href="{% url 'core:home' %}" class="btn btn-success" style="margin-bottom: 5px">Home
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+               <li class="nav-item active">
+                   <a href="http://127.0.0.1:8000/filtering/tents" class="btn btn-success" style="margin-bottom: 5px">Tents
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+
+               <li class="nav-item active">
+                   <a href="http://127.0.0.1:8000/filtering/seats" class="btn btn-success" style="margin-bottom: 5px">Seats
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+            <li class="nav-item active">
+                   <a href="http://127.0.0.1:8000/filtering/Toilets" class="btn btn-success" style="margin-bottom: 5px">Toilets
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+                 <li class="nav-item active">
+                   <a href="http://127.0.0.1:8000/filtering/catering" class="btn btn-success" style="margin-bottom: 5px">Catering
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+
+{##}
+{#            <form action="filtering.html" method="get">#}
+{#          <li class="nav-item">#}
+{#            <a class="nav-link" name="tent" href="{% url 'core:filtering' %}">Tents</a>#}
+{#              <a href="?title=True" class="btn btn-{% if 'title' in request.GET %}warning{% else %}primary{% endif %}" style="margin-bottom: 5px">Title</a>#}
+{#</a>#}
+{#          </li>#}
+{##}
+{#          <li class="nav-item">#}
+{#            <a class="nav-link" name="price" href="{% url 'core:home' %}">Discount</a>#}
+{#              <a name="price" href="?price=True" class="btn btn-{% if 'discount_price' in request.GET %}warning{% else %}primary{% endif %}" style="margin-bottom: 5px">Price</a>#}
+{#          </li>#}
+
+{#          <li class="nav-item">#}
+{#            <a class="nav-link" name="cater" href="#">Catering</a>#}
+{#              <a href="?discount_price=True" class="btn btn-{% if 'discount_price' in request.GET %}warning{% else %}primary{% endif %}" style="margin-bottom: 5px">Discount Price#}
+{#</a>#}
+{#          </li>#}
+{#             <li class="nav-item">#}
+{#            <a class="nav-link" name="toilet" href="#">Portable Toilets</a>#}
+{#          </li>#}
+{#  </form>#}
+        </ul>
+
+      </div>
+        <!-- Links -->
+
+<form class="form-inline my-2 my-lg-1" action="#" method="get">
+  <input
+      class="form-control mr-sm-2"
+      type="text"
+      placeholder="Search"
+      aria-label="Search"
+      name='q'>
+  <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #0b51c5;width: 100px">Search</button>
+</form>
+
+
+{#        <form class="form-inline">#}
+{#          <div class="md-form my-0">#}
+{#            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">#}
+{#          </div>#}
+{#        </form>#}
+{#     </div>#}
+      <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Section: Products v.3-->
+    <section class="text-center mb-4">
+
+      <div class="row wow fadeIn" style="background-color: white;margin-left: -280px;margin-right: -280px">
+
+        {% for item in object_list %}
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="card">
+
+            <div class="view overlay">
+              {% comment %} <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
+                class="card-img-top" {% endcomment %} <img src="{{ item.image.url }}" class="card-img-top" style=".card-img-top {
+height: 250px !important;
+}">
+              <a href="{{ item.get_absolute_url }}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <div class="card-body text-center">
+              <a href="" class="grey-text">
+                <h5>{{ item.get_category_display }}</h5>
+              </a>
+              <h5>
+                <strong>
+                  <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
+                    <span class="badge badge-pill {{ item.get_label_display }}-color">NEW</span>
+                  </a>
+                </strong>
+              </h5>
+
+              <h4 class="font-weight-bold blue-text">
+                <strong>KSh
+                  {% if item.discount_price %}
+                  {{ item.discount_price }}
+                  {% else %}
+                  {{ item.price }}
+                  {% endif %}
+                </strong>
+              </h4>
+
+            </div>
+
+          </div>
+
+        </div>
+        {% endfor %}
+      </div>
+
+    </section>
+    <!--Section: Products v.3-->
+
+    <!--Pagination-->
+
+    {% if is_paginated %}
+    <nav class="d-flex justify-content wow fadeIn">
+      <ul class="pagination pg-blue">
+
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        {% endif %}
+
+        <li class="page-item active">
+          <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+    {% endif %}
+
+  </div>
+</main>
+    </div>
+{% endblock content %}

@@ -1,6 +1,7 @@
 from django import forms
 from django_countries.fields import CountryField
 from django_countries.widgets import CountrySelectWidget
+from .models import Item
 
 
 PAYMENT_CHOICES = (
@@ -64,3 +65,9 @@ class PaymentForm(forms.Form):
 
 class mpesaform(forms.Form):
     phonenumber = forms.CharField()
+
+
+class categories(forms.Form):
+    class Meta:
+        model = Item
+        fields = ['categories']

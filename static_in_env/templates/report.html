@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="container">
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+      <!-- Navbar brand -->
+      <span class="navbar-brand">Categories:</span>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+                   <a href="{% url 'core:home' %}" class="btn btn-success" style="margin-bottom: 5px">Home
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+               <li class="nav-item active">
+                   <a href="http://127.0.0.1:8000/filtering/t" class="btn btn-success" style="margin-bottom: 5px">Tents
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+
+               <li class="nav-item active">
+                   <a href="http://127.0.0.1:8000/filtering/s" class="btn btn-success" style="margin-bottom: 5px">Seats
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+            <li class="nav-item active">
+                   <a href="http://127.0.0.1:8000/filtering/T" class="btn btn-success" style="margin-bottom: 5px">Toilets
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+                 <li class="nav-item active">
+                   <a href="http://127.0.0.1:8000/filtering/c" class="btn btn-success" style="margin-bottom: 5px">Catering
+
+              <span class="sr-only">(current)</span>
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+        <!-- Links -->
+
+<form class="form-inline my-2 my-lg-1" action="#" method="get">
+  <input
+      class="form-control mr-sm-2"
+      type="text"
+      placeholder="Search"
+      aria-label="Search"
+      name='q'>
+  <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: whitesmoke;width: 100px">Search</button>
+</form>
+
+
+{#        <form class="form-inline">#}
+{#          <div class="md-form my-0">#}
+{#            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">#}
+{#          </div>#}
+{#        </form>#}
+{#     </div>#}
+      <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Section: Products v.3-->
+    <section class="text-center mb-4">
+{% if user.is_staff %}
+      <div class="row wow fadeIn" style="background-color: transparent;margin-left: -280px;margin-right: -280px">
+
+    <div style="background-color: transparent;width: 800px;margin-left: 200px">
+        <center> <h2 style="text-align: center">REPORTS FOR THE ADMIN</h2></center>>
+
+                  <table style="border: black; color: black; height: 800px;width: 1300px" border="5"cellpadding="20" >
+                      <tr>
+                          <h3> <th>Company Name</th></h3>
+                           <th>Category</th>
+
+                           <th>Ordered Date</th>
+                          <th>Quantity Ordered</th>
+                           <th>Item Price</th>
+
+                      </tr>
+                           {% for cat in items1 %}
+                            {% for cat1 in items2 %}
+                                {% for cat3 in items3 %}
+                      <tr>
+                          <td>{{ cat.title }}</td>
+                          <td>{{ cat.categories}}</td>
+
+                          <td>{{ cat3.ordered_date }}</td>
+                          <td>{{ cat.quantity }}</td>
+                      <td>{{ cat.price }}</td>
+                      </tr>
+                       {% endfor %}
+        {% endfor %}
+                  {% endfor %}
+                  </table>
+
+      </div>
+      </div>
+    </section>
+
+
+</main>
+    </div>
+    {% else %}
+    <h1 style="background-color: red;color:white">You need to login as admin</h1>
+{% endif %}
+{% endblock content %}

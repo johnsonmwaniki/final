@@ -1,3 +1,4 @@
+
 from django.db.models.signals import post_save
 from django.conf import settings
 from django.db import models
@@ -36,14 +37,20 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
-
+CATEGORIES=(
+            ('seat','seat'),
+            ('tents', 'tents'),
+            ('catering', 'catering'),
+            ('Toilets', 'toilets'),
+)
 
 class Item(models.Model):
     title = models.CharField(max_length=100)
     price = models.FloatField()
-    discount_price = models.FloatField(blank=True, null=True)
+    discount_price = models.FloatField(default=0)
     # category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
     label = models.CharField(choices=LABEL_CHOICES, max_length=1)
+    categories = models.CharField(choices=CATEGORIES, max_length=100)
     slug = models.SlugField()
     description = models.TextField()
     image = models.ImageField()
@@ -81,6 +88,8 @@ class OrderItem(models.Model):
     ordered = models.BooleanField(default=False)
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
+    shipping_date = models.DateTimeField(default='2019-2-22')
+    ordered_date = models.DateTimeField(default='2019-1-10')
 
     def __str__(self):
         return f"{self.quantity} of {self.item.title}"

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<head>
+<title>Create a Post </title>
+</head>
+
+<div style="background-color: transparent">
+    <br>
+<div style="background-color: whitesmoke">
+    <h1 style="text-align: center">Contact Us  </h1>
+    <form action="" method="POST">
+    {% csrf_token %}
+    </br>
+    <div class="contact" style="margin-left: 570px">
+    Name: <input  size="70" type="text" name="name" style="width: 43em; height: 3em"/></br></br>
+
+    Phone: <input type="number" name="phone" style="width: 43em; height: 3em"></br></br>
+
+    E-mail: <input size="70" type="email" name="email" style="width: 43em; height: 3em"/></br></br>
+
+        <br/>
+
+    Message: <br/>
+    <textarea style="width: 48em; height: 7em" name="message">
+    </textarea><br/><br/><br/>
+         <button style="width: 60em" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div><br>
+<center>
+ <div class="pb-4" style="align-content: center">
+    <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank">
+      <i class="fab fa-facebook-f mr-3"></i>
+    </a>
+
+    <a href="https://twitter.com/home" target="_blank">
+      <i class="fab fa-twitter mr-3"></i>
+    </a>
+
+    <a href="https://www.youtube.com/channel/UC2Dh5vV2pChlS2lqmi0fZ1A" target="_blank">
+      <i class="fab fa-youtube mr-3"></i>
+    </a>
+
+    <a href="https://www.google.com/webhp?authuser=2" target="_blank">
+      <i class="fab fa-google-plus-g mr-3"></i>
+    </a>
+
+    <a href="https://dribbble.com/felix munene" target="_blank">
+      <i class="fab fa-dribbble mr-3"></i>
+    </a>
+
+    <a href="https://pinterest.com/johnson mwaniki" target="_blank">
+      <i class="fab fa-pinterest mr-3"></i>
+    </a>
+
+    <a href="https://github.com/johnsonmwaniki/" target="_blank">
+      <i class="fab fa-github mr-3"></i>
+    </a>
+
+    <a href="http://codepen.io/johnson mwaniki" target="_blank">
+      <i class="fab fa-codepen mr-3"></i>
+    </a>
+ </div></center>
+{#<div>#}
+{#<a href="{% url 'index' %}" >home</a>#}
+{#<a href="{% url 'services' %}" >services</a>#}
+{#<a href="{% url 'clients' %}" >clients</a>#}
+{#<a href="{% url 'contact' %}" >contact</a>#}
+{##}
+{#</div>#}
+	   <div class="container">
+	    <div id="copywrite">
+
+	        <br />
+
+	    <!-- end #copywrite"--></div>
+
+{#	    <div class="nav">#}
+{#		    Social media#}
+{#        </div>#}
+{##}
+{#		    <!--<a href="blog/index.html">// Blog</a>#}
+{#		    <br />-->#}
+{#		    <a href="https://www.facebook.com/BroomsLimited" target="_blank">// Facebook</a>#}
+{#		    <br />#}
+{#		    <a href="https://twitter.com/brooms_limited" target="_blank">// Twitter</a>#}
+{##}
+{##}
+{#	    </div><!-- end .nav -->#}
+{#	    <div id="contact">#}
+{##}
+{##}
+{#	         <a href="mailto:info@broomslimited.com">e. info@broomslimited.com</a>#}
+{#	    <!-- end #contact --></div>#}
+    </div><!-- end .container -->
+<!-- end #footer --></div>
+{% endblock %}
